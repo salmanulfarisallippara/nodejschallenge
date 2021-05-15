@@ -1,3 +1,3 @@
-var i=10;
-var j=2;
-console.log(i+j);
+var a=10;
+var b=2;
+console.log(a+b);
