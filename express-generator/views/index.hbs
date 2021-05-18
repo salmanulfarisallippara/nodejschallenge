@@ -1,2 +1,10 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+{{#each value}}
+<h1>{{this}}</h1>
+{{/each}}
+
+<h1>{{per.name1}}</h1>
+{{#if per.admin}}
+    <h1>this is admin</h1>
+{{else}}
+    <h1>this is normal user</h1>
+{{/if}}
