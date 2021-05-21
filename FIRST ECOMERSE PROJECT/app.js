@@ -5,7 +5,15 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 //for file upload
 var fileUpload=require("express-fileupload")
+//to connect mongo db config in connection
+var db = require('./config/connection')
+// call database functioon
 
+db.connect((err)=>{
+  if(err) console.log("connection problem")
+  else
+  console.log("database connected")
+})
 //change name
 var userRouter = require('./routes/user');
 var adminRouter = require('./routes/admin');
