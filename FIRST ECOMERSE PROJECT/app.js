@@ -7,6 +7,7 @@ var logger = require('morgan');
 var fileUpload=require("express-fileupload")
 //to connect mongo db config in connection
 var db = require('./config/connection')
+var session=require('express-session')
 // call database functioon
 
 db.connect((err)=>{
@@ -35,7 +36,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(session({secret:"key",cookie:{maxAge:60000}}))
 app.use('/', userRouter);
 app.use('/admin', adminRouter);
 

@@ -1,14 +1,16 @@
 
     <section>
         <div class="container mt-5">
-            <div class="row">
+            <div class="row text-center">
                 {{#each product}}
-                <div class="md-3">
-                    <div class="card" style="width: 17rem;">
-                        <img class="card-img-top" src="{{this.image}}" alt="Card image cap">
+                <div class=" m-2">
+                    <div class="card" style="width: 16rem;">
+                        <img class="card-img-top" src="/product-images/{{this._id}}.jpg" 
+                        style="height: 10rem;"
+                        alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title">{{this.name}}</h5>
-                            <p class="card-text">{{this.description}}</p>
+                            <h5 class="card-title">{{this.Name}}</h5>
+                            <p class="card-text">{{this.Price}}</p>
                             <a href="#" class="btn btn-primary">Add Cart</a>
                         </div>
                     </div>
